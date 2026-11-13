@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Auto-WebMCP (勝手WebMCP化 & AI安全ロック)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --text: #18181b;
+      --muted: #52525b;
+      --border: #e4e4e7;
+      --accent: #0d9488;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #09090b;
+        --surface: #18181b;
+        --text: #f4f4f5;
+        --muted: #a1a1aa;
+        --border: #27272a;
+        --accent: #14b8a6;
+      }
+    }
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 40px;
+    }
+    h1 { font-size: 1.6rem; margin-top: 0; }
+    h2 { font-size: 1.15rem; margin-top: 28px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+    p, li { color: var(--text); font-size: 0.96rem; }
+    .meta { color: var(--muted); font-size: 0.88rem; margin-bottom: 24px; }
+    .badge {
+      display: inline-block;
+      background: rgba(13, 148, 136, 0.12);
+      color: var(--accent);
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="badge">Local-First / Zero External Tracking</span>
+    <h1>Privacy Policy — Auto-WebMCP (勝手WebMCP化 &amp; AI安全ロック)</h1>
+    <p class="meta">Last updated: 2026-11-13 | Publisher: furoku</p>
+
+    <h2>1. 概要 (Overview)</h2>
+    <p>
+      <strong>Auto-WebMCP</strong> は、開いているWebページ上の操作要素（検索フォーム、絞り込み、ページ移動リンク、下書き入力欄、各種ボタン）をブラウザ内で検出し、AIアシスタントから安全に利用できる操作ツールへ自動変換するローカル完結型のChrome拡張機能です。決済・送信・削除・ログインなどの重要操作には、必ず人間による承認ダイアログ（安全ロック）を表示します。
+    </p>
+    <p>
+      <strong>Auto-WebMCP</strong> is a local-first Chrome extension that automatically detects interactive controls on web pages and converts them into structured actions with a mandatory human-in-the-loop Safety Lock for sensitive actions (payments, form submissions, deletions, and sign-in).
+    </p>
+
+    <h2>2. 収集しないデータ (No Personal Data Collection)</h2>
+    <ul>
+      <li><strong>個人情報・閲覧履歴・入力内容の外部送信なし</strong>：氏名、メールアドレス、住所、決済情報、パスワード、閲覧履歴、フォーム入力内容を開発者や第三者の外部サーバーへ送信・収集・販売することは一切ありません。</li>
+      <li><strong>端末内のみの保存</strong>：拡張機能のON/OFF設定、画面右下のHUD表示設定、テーマ設定、および表示中タブの一時キャッシュはお使いのブラウザ内のローカル領域にのみ保存され、外部サーバーとは同期されません。</li>
+    </ul>
+
+    <h2>3. データの処理方法 (How Data Is Processed)</h2>
+    <ul>
+      <li><strong>ブラウザ内完結処理</strong>：ページ内のボタン・フォームの検出、不要な広告・フッター等の除外、および安全ロック判定はすべてお使いのブラウザ内で完結します。</li>
+      <li><strong>ローカルループバック通信（任意）</strong>：ユーザーが自身のPC上でローカルブリッジを実行している場合のみ、同一PC内のループバック（<code>127.0.0.1</code>）で連携します。インターネット経由で外部へデータが送信されることはありません。</li>
+    </ul>
+
+    <h2>4. 第三者提供・解析ツールの不使用 (No Third-Party Sharing or Analytics)</h2>
+    <ul>
+      <li>外部アクセス解析ツール、テレメトリSDK、広告トラッカーは一切含まれていません。</li>
+      <li>ユーザーデータを第三者に販売・貸与・転送することはありません。</li>
+      <li>拡張機能の単一目的以外の用途や、信用調査・融資判断の目的でデータを使用することは一切ありません。</li>
+    </ul>
+
+    <h2>5. データの削除方法 (Data Retention &amp; Deletion)</h2>
+    <p>
+      ツールバーのポップアップ右上にある更新ボタン、または拡張機能のアンインストールにより、端末内に保存されたローカル設定および一時キャッシュは即座に削除されます。
+    </p>
+
+    <h2>6. お問い合わせ (Contact)</h2>
+    <p>
+      Publisher: <strong>furoku</strong> (<a href="https://github.com/furoku">https://github.com/furoku</a>)<br />
+      Email: <code>2715085+furoku@users.noreply.github.com</code>
+    </p>
+  </main>
+</body>
+</html>
