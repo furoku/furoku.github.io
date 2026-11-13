@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>プライバシーポリシー / Privacy Policy — 🍌 BananaX</title>
+  <meta name="description" content="Privacy Policy for the BananaX Chrome Extension (Japanese & English)." />
+  <link rel="canonical" href="https://furoku.github.io/privacy/banana-infograph.html" />
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --accent: #0284c7;
+      --accent-soft: #e0f2fe;
+      --code-bg: #f1f5f9;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1120;
+        --surface: #111827;
+        --text: #f1f5f9;
+        --muted: #94a3b8;
+        --border: #1e293b;
+        --accent: #38bdf8;
+        --accent-soft: #0c4a6e;
+        --code-bg: #1e293b;
+      }
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 32px 16px 64px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 840px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 36px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 28px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 26px;
+      line-height: 1.3;
+    }
+    .meta {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .lang-nav {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .lang-nav a {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .lang-nav a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    h2 {
+      font-size: 20px;
+      margin-top: 32px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 {
+      font-size: 16px;
+      margin-top: 22px;
+      margin-bottom: 8px;
+    }
+    p, ul, ol {
+      margin-top: 8px;
+      margin-bottom: 14px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9em;
+      background: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    hr {
+      border: 0;
+      border-top: 2px solid var(--border);
+      margin: 40px 0;
+    }
+    a {
+      color: var(--accent);
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 22px 18px;
+      }
+      h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <span class="badge">Chrome Extension Privacy Policy</span>
+      <h1>プライバシーポリシー / Privacy Policy (🍌 BananaX)</h1>
+      <div class="meta">
+        最終更新日 / Last Updated: <time datetime="2026-11-13">2026年11月13日 (November 13, 2026)</time><br />
+        Public URL: <code>https://furoku.github.io/privacy/banana-infograph.html</code>
+      </div>
+      <nav class="lang-nav" aria-label="Language switch">
+        <a href="#ja">🇯🇵 日本語</a>
+        <a href="#en">🌐 English</a>
+      </nav>
+    </header>
+
+    <section id="ja" lang="ja">
+      <h2>🇯🇵 日本語 (Japanese)</h2>
+      <p>
+        本プライバシーポリシーは、Chrome拡張機能「<strong>🍌 BananaX</strong>」（以下「本拡張機能」）におけるユーザー情報の取り扱いについて説明します。
+      </p>
+
+      <h3>1. 取得・処理する情報</h3>
+      <p>
+        本拡張機能は、インフォグラフィック画像の生成および機能提供のために以下の情報を取り扱います。開発者独自のバックエンドサーバーは存在せず、以下のデータはいずれもユーザーのブラウザ内またはユーザーが指定したAI APIプロバイダーとの直接通信でのみ処理されます。
+      </p>
+      <ol>
+        <li>
+          <strong>AI APIキー（Google Gemini APIキー / OpenAI APIキー）</strong>
+          <ul>
+            <li>ユーザーが設定画面（ポップアップまたはオプション画面）で入力したAPIキーを取得します。</li>
+            <li>APIキーはユーザーのブラウザ内（<code>chrome.storage.local</code> および <code>chrome.storage.sync</code>）にのみ保存され、開発者のサーバーや第三者へ送信されることはありません。</li>
+            <li>設定のJSONバックアップ出力（エクスポート）機能を実行した際も、セキュリティ保護のためAPIキーは自動的に除外されます。</li>
+          </ul>
+        </li>
+        <li>
+          <strong>X（旧Twitter）の投稿テキスト・文脈情報・参照画像</strong>
+          <ul>
+            <li>ユーザーがXの投稿作成画面で「🍌」ボタンをクリックして画像生成を実行した際、入力中のテキスト、返信元・引用元の投稿テキスト（文脈理解のため）、およびユーザーが任意で登録した参照画像（キャラ・スタイル・ロゴ固定機能）を読み取ります。</li>
+            <li>これらの情報は、インフォグラフィック画像を生成する目的でのみ、ユーザーが選択したAI APIエンドポイントへブラウザから直接HTTPS送信されます。</li>
+          </ul>
+        </li>
+        <li>
+          <strong>ローカル保存される設定・履歴データ（ブラウザ内完結）</strong>
+          <ul>
+            <li>カスタムプロンプトパターン、アスペクト比、UI言語、選択中のAIモデル（<code>gemini-nano-banana-2.1</code> / <code>gpt-image-2.6-flare</code>）</li>
+            <li>マイブランドカラー設定（プライマリカラー・アクセントカラー・背景トーン）</li>
+            <li>クレジット透かし設定（<code>@handle</code> 等のテキストおよびON/OFF状態）</li>
+            <li>参照画像データおよび直近の生成履歴（最大20件、<code>chrome.storage.local</code> に保存）</li>
+            <li>透かし合成（Canvas処理）、クリップボードへのPNG画像コピー、アクセシビリティ用ALTテキスト生成、設定JSONのエクスポート／インポートはすべてブラウザ内（クライアントサイド）で完結します。</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h3>2. 外部通信先とデータの送信</h3>
+      <ul>
+        <li>
+          <strong>Google Gemini API (<code>https://generativelanguage.googleapis.com/*</code>)</strong>:
+          ユーザーがGeminiモデルを選択して画像生成を実行した際、ユーザーのGemini APIキーを用いてGoogleのAPIサーバーへプロンプト・投稿文脈・参照画像を直接送信します。
+        </li>
+        <li>
+          <strong>OpenAI Images API (<code>https://api.openai.com/*</code>)</strong>:
+          ユーザーがOpenAIモデルを選択して画像生成を実行した際、ユーザーのOpenAI APIキーを用いてOpenAIのAPIサーバーへプロンプト・投稿文脈・参照画像を直接送信します。
+        </li>
+        <li>
+          <strong>スタイル見本・人気ランキングカタログ (<code>https://furoku.github.io/*</code>)</strong>:
+          ポップアップ内の「人気ランキング」タブ等を表示する際、公開されている静的カタログJSONおよびサムネイル画像を読み取るためにのみアクセスします。ユーザーの個人情報や投稿データが送信されることはありません。
+        </li>
+      </ul>
+
+      <h3>3. 第三者提供・トラッキングの禁止</h3>
+      <ul>
+        <li>開発者は、ユーザーのAPIキー、投稿内容、生成画像、閲覧履歴などを収集・保存・閲覧するサーバーを持たず、第三者への販売・提供・貸与を一切行いません。</li>
+        <li>本拡張機能には外部アクセス解析ツール（Google Analytics等）、広告SDK、テレメトリ送信コード、リモートコード実行機能は一切含まれていません。</li>
+        <li>GoogleおよびOpenAIにおけるAPI通信データの取り扱いは、各社が定める利用規約およびプライバシーポリシーに従います。</li>
+      </ul>
+
+      <h3>4. データの管理と削除</h3>
+      <ul>
+        <li>ポップアップ内の「履歴をすべて削除」や参照画像の「クリア」、またはAPIキー欄を空にして保存することで、いつでも保存データを消去できます。</li>
+        <li>Chromeブラウザから本拡張機能をアンインストールすると、ローカルストレージのデータも削除されます。</li>
+      </ul>
+
+      <h3>5. お問い合わせ</h3>
+      <p>
+        本プライバシーポリシーに関するお問い合わせは、開発者連絡先（X: <a href="https://x.com/furoku" target="_blank" rel="noopener noreferrer">@furoku</a>）までお願いいたします。
+      </p>
+    </section>
+
+    <hr />
+
+    <section id="en" lang="en">
+      <h2>🌐 English</h2>
+      <p>
+        This Privacy Policy explains how the Chrome extension <strong>"🍌 BananaX"</strong> ("the Extension") handles user data.
+      </p>
+
+      <h3>1. Data Collected and Processed</h3>
+      <p>
+        The Extension does not operate any proprietary backend servers. All data is stored locally in your browser or sent directly from your browser to the AI API provider you configure:
+      </p>
+      <ol>
+        <li>
+          <strong>AI API Keys (Google Gemini API Key / OpenAI API Key)</strong>
+          <ul>
+            <li>Stored exclusively in your browser (<code>chrome.storage.local</code> and <code>chrome.storage.sync</code>).</li>
+            <li>Never transmitted to the developer or any third party other than the official API endpoint you select.</li>
+            <li>Automatically stripped and excluded when exporting settings via the JSON Backup feature.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>X (formerly Twitter) Post Text, Context, and Optional Reference Images</strong>
+          <ul>
+            <li>Read only when you explicitly click the "🍌" button in the X post composer to generate an infographic.</li>
+            <li>Sent directly over HTTPS from your browser to your selected AI API provider (<code>generativelanguage.googleapis.com</code> or <code>api.openai.com</code>) solely to generate the requested image.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Locally Stored Preferences &amp; Generation History (100% Client-Side)</strong>
+          <ul>
+            <li>Custom prompt patterns, aspect ratio, language, selected AI model, Brand Color Palette settings, Credit Watermark (<code>@handle</code>) settings, optional reference image, and up to 20 recent generation history items are stored in <code>chrome.storage.local</code> / <code>chrome.storage.sync</code>.</li>
+            <li>Watermark compositing (HTML5 Canvas), 1-click PNG clipboard copying, Auto-ALT text generation, and JSON settings backup/restore all run 100% locally inside your browser.</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h3>2. External Network Requests</h3>
+      <ul>
+        <li><strong>Google Gemini API (<code>https://generativelanguage.googleapis.com/*</code>)</strong>: Direct API calls using your Gemini API key when generating images with Gemini.</li>
+        <li><strong>OpenAI Images API (<code>https://api.openai.com/*</code>)</strong>: Direct API calls using your OpenAI API key when generating images with OpenAI.</li>
+        <li><strong>Public Style Catalog (<code>https://furoku.github.io/*</code>)</strong>: Read-only fetch of public static infographic style rankings and thumbnails. No user data is transmitted.</li>
+      </ul>
+
+      <h3>3. No Tracking, Analytics, or Remote Code</h3>
+      <ul>
+        <li>The Extension contains <strong>no analytics, no telemetry, no ad trackers, and no remote code execution</strong>.</li>
+        <li>We do not collect, sell, rent, or transfer any user data to third parties.</li>
+      </ul>
+
+      <h3>4. Contact</h3>
+      <p>
+        For questions regarding this Privacy Policy, please contact the developer via X (<a href="https://x.com/furoku" target="_blank" rel="noopener noreferrer">@furoku</a>).
+      </p>
+    </section>
+  </main>
+</body>
+</html>
