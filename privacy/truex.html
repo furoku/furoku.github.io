@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>trueX プライバシーポリシー / Privacy Policy</title>
+  <meta name="description" content="Chrome拡張機能 trueX の公式プライバシーポリシー（日本語・英語統合版）。ブラウザ内処理、3段階の通信経路、ローカル保存データ、要求権限、データ非販売保証について。 / Official bilingual Privacy Policy for the trueX Chrome Extension.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://furoku.github.io/privacy/truex.html">
+  <style>
+    :root {
+      --bg: #070b14;
+      --surface: #0f172a;
+      --surface-alt: #131e35;
+      --border: #1e293b;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --body: #cbd5e1;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --emerald: #34d399;
+      --emerald-soft: rgba(52, 211, 153, 0.12);
+      --code-bg: #1e293b;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc;
+        --surface: #ffffff;
+        --surface-alt: #f1f5f9;
+        --border: #e2e8f0;
+        --text: #0f172a;
+        --muted: #64748b;
+        --body: #334155;
+        --accent: #0284c7;
+        --accent-soft: rgba(2, 132, 199, 0.08);
+        --emerald: #059669;
+        --emerald-soft: rgba(5, 150, 105, 0.08);
+        --code-bg: #f1f5f9;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 15px;
+      padding-bottom: 72px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 28px 0 24px;
+      margin-bottom: 32px;
+    }
+    .brand-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: -0.02em;
+    }
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #0284c7, #38bdf8);
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 15px;
+    }
+    .lang-nav {
+      display: inline-flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .lang-nav a {
+      text-decoration: none;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .lang-nav a:hover {
+      opacity: 0.88;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    .summary-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--emerald);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 32px;
+    }
+    .summary-box h2 {
+      margin: 0 0 8px;
+      border: none;
+      padding: 0;
+      font-size: 16px;
+      color: var(--emerald);
+    }
+    .summary-box p {
+      margin-bottom: 8px;
+      color: var(--body);
+      font-size: 14.5px;
+    }
+    .summary-box p:last-child { margin-bottom: 0; }
+    section.policy-lang {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 28px 32px;
+      margin-bottom: 36px;
+    }
+    .lang-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 21px;
+      font-weight: 800;
+      margin: 28px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+    h2.section-title-top {
+      margin-top: 4px;
+      font-size: 23px;
+    }
+    h3 {
+      font-size: 16.5px;
+      font-weight: 700;
+      margin: 20px 0 8px;
+      color: var(--accent);
+    }
+    p {
+      color: var(--body);
+      margin-bottom: 14px;
+    }
+    ul {
+      margin: 0 0 16px 22px;
+      color: var(--body);
+    }
+    li { margin-bottom: 7px; }
+    strong { color: var(--text); }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      background: var(--code-bg);
+      color: var(--accent);
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-size: 13px;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      margin: 14px 0 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.8px;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface-alt);
+      color: var(--text);
+      font-weight: 700;
+    }
+    td { color: var(--body); }
+    .cert-card {
+      background: var(--emerald-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-top: 14px;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    @media (max-width: 640px) {
+      section.policy-lang { padding: 20px 16px; }
+      h1 { font-size: 23px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand-row">
+        <div class="brand">
+          <span class="brand-badge">tX</span>
+          <span>trueX — Privacy Policy</span>
+        </div>
+        <nav class="lang-nav" aria-label="Language navigation">
+          <a href="#ja">日本語 (Japanese)</a>
+          <a href="#en">English</a>
+        </nav>
+      </div>
+      <h1>プライバシーポリシー / Privacy Policy</h1>
+      <div class="meta">
+        対象プロダクト: Chrome 拡張機能「trueX - AIタイムライン調律＆ファクトチェック」 (v1.7.0以降対応) ・
+        最終更新日 / Last Updated: 2026-11-13
+      </div>
+    </header>
+
+    <div class="summary-box">
+      <h2>🔒 30秒でわかるプライバシー要約 / Privacy at a Glance</h2>
+      <p>
+        <strong>1. 最小データ・ブラウザ内優先:</strong> 日常投稿や定型ノイズの約66%、および「投稿前・深呼吸ガード」「毒の発酵ラボ」「エコーチェンバー体温計」「偏食たまごっち」「サンセット調律」はすべて<strong>お使いのブラウザ内のみ</strong>で処理され、外部へ送信されません。<br>
+        <strong>2. 判定テキストの非保存（Zero-Storage Proxy）:</strong> AI深層判定を行う投稿のみ中継サーバー経由（またはご自身のAPIキーで直接）TypeSafe AI へ暗号化送信されますが、中継サーバーに投稿本文やアカウント名が保存・記録されることは一切ありません。<br>
+        <strong>3. 第三者販売・広告利用ゼロ:</strong> 利用者のデータを第三者へ販売・貸与したり、広告ターゲティングや信用調査に利用することは一切ありません。
+      </p>
+      <p>
+        <strong>English Summary:</strong> ~66% of routine timeline filtering and all mindful tools (Pre-Post Breath Guard, Fermentation Lab, Echo Chamber Thermometer, Picky Tamagotchi, Sunset Fade) run <strong>100% locally in your browser</strong>. Only posts requiring deep AI context verification are sent over HTTPS to TypeSafe AI (directly via BYOK or through our zero-storage quota proxy, which never logs or persists post text). We never sell user data or use it for advertising.
+      </p>
+    </div>
+
+    <!-- ==================== JAPANESE SECTION ==================== -->
+    <section id="ja" class="policy-lang" lang="ja">
+      <span class="lang-tag">日本語 (Japanese)</span>
+      <h2 class="section-title-top">trueX プライバシーポリシー</h2>
+      <p>
+        Chrome 拡張機能「trueX」（開発元: furoku、以下「本拡張機能」）は、X（旧 Twitter）のタイムラインを穏やかに調律し、投稿の背景文脈や確信度を確認するという<strong>単一の目的（Single Purpose）</strong>のために設計されています。本ポリシーでは、本拡張機能が取り扱う情報、ブラウザ内処理と外部通信の境界、保存場所、および利用者の管理方法を明記します。
+      </p>
+
+      <h2>1. ブラウザ内（端末ローカル）のみで完結する処理</h2>
+      <p>以下の機能はすべてお使いのブラウザ内で計算・保存され、外部サーバーへテキストや履歴が送信されることはありません。</p>
+      <ul>
+        <li><strong>ブラウザ内高速フィルター（ETCゲート）:</strong> 挨拶・日常・趣味・定型の煽り表現などを端末内のルール辞書で即座に判定し、不要な外部API通信を約66%削減します。</li>
+        <li><strong>投稿前・深呼吸ガード＆言い換え提案:</strong> 返信・投稿欄に入力中の下書きテキストに強い言葉が含まれるかをブラウザ内でのみ検査し、穏やかな言い換え候補を提示します。<strong>入力中の下書きが外部へ送信されることは一切ありません。</strong></li>
+        <li><strong>毒の発酵ラボ（<code>truex_fermented_seeds</code>）:</strong> 薄化したトゲ投稿から投稿者IDや個人名を除去したうえで、端末内で匿名の「問い・企画の種」へ変換してローカル保存します。</li>
+        <li><strong>エコーチェンバー体温計（<code>truex_echo_chamber_state</code>）:</strong> 直近に表示された話題キーワードの偏り度合いをブラウザ内メモリおよびローカルストレージのみで集計します。</li>
+        <li><strong>偏食たまごっち・週間時短証明書・サンセット調律:</strong> 判定カテゴリ件数（数値のみ）と夜間時刻設定（<code>sunset_auto_lock</code>）に基づき、すべて端末内で表示します。</li>
+      </ul>
+
+      <h2>2. 3段階のAI判定通信と外部送信データ</h2>
+      <p>ブラウザ内フィルターで即決できない投稿についてAI深層判定を行う場合のみ、利用プランに応じて以下の暗号化通信（HTTPS）を行います。</p>
+
+      <h3>(1) 無料お試し枠（100回）および trueX Pro（月10,000回）</h3>
+      <ul>
+        <li><strong>通信先:</strong> 開発元の中継プロキシ（<code>https://truex.mojofull.com/api/verify-free</code>、Cloudflare Workers）を経由し、<code>https://api.typesafe.ai</code> へ転送されます。</li>
+        <li><strong>送信されるデータ:</strong>
+          <ul>
+            <li>判定対象ポストの本文（<code>tweet_text</code>）、投稿者表示名/ハンドル（<code>author</code>）、出力言語設定（<code>language</code>）</li>
+            <li>付随する文脈シグナル（引用元テキスト、外部リンクドメイン、コミュニティノート有無・文面）</li>
+            <li>ランダム生成された匿名クライアント識別子（<code>X-TrueX-Client-Id</code> ヘッダー：個人やXアカウントとは無関係なランダム文字列）</li>
+            <li>trueX Pro 利用時のみ：ライセンス照合キー（<code>X-TrueX-License-Key</code> ヘッダー：<code>tx_pro_...</code>）</li>
+          </ul>
+        </li>
+        <li><strong>送信タイミング:</strong> 自動判定ON時は画面内に表示され一定時間（約150ms以上）静止した未判定ポストのみ送信されます（素早くスクロール通過した投稿やローカルキャッシュ済みの投稿は送信されません）。自動判定OFF時は利用者が手動で判定ボタンを押した投稿のみ送信されます。</li>
+        <li><strong>中継サーバーの非保存原則（Zero-Storage Proxy）:</strong> <code>truex.mojofull.com</code> は残り判定回数のカウント管理のみを行い、<strong>投稿本文・引用文・投稿者名をデータベースやログに永続保存することは一切ありません。</strong></li>
+      </ul>
+
+      <h3>(2) trueX Pro の決済処理とマルチデバイス設定同期（最大3台）</h3>
+      <ul>
+        <li><strong>Stripe による決済:</strong> サブスクリプション決済は PCI-DSS レベル1準拠の <strong>Stripe</strong> 上で直接処理されます。開発元がクレジットカード番号・CVC・銀行口座情報を取得・保持することは一切ありません。</li>
+        <li><strong>設定同期（<code>https://truex.mojofull.com/api/pro/sync</code>）:</strong> 利用者が設定同期を実行した場合のみ、ライセンスキーに紐づく設定項目（聖域リスト <code>whitelist_authors</code>、ミュートリスト <code>muted_authors</code>、カスタムNGワード <code>muted_keywords</code>、時間帯スケジュール <code>schedule_config</code>、テーマ <code>custom_theme</code>、執事口調 <code>butler_voice</code>）を最大3台の端末間で暗号化同期します。投稿本文や閲覧履歴は含まれません。</li>
+      </ul>
+
+      <h3>(3) 開発者向け BYOK（ご自身の TypeSafe AI API キー利用時）</h3>
+      <ul>
+        <li>ご自身の API キー（<code>typesafe_api_key</code>）を設定した場合、ブラウザから <code>https://api.typesafe.ai</code> へ直接 HTTPS 通信を行い、開発元の中継サーバーを経由しません。送信データには TypeSafe AI の利用規約・プライバシーポリシーが適用されます。</li>
+      </ul>
+
+      <h2>3. 匿名の品質改善テレメトリ</h2>
+      <p>
+        障害検知および機能改善のため、投稿本文や個人情報を一切含まない匿名の定型イベント（インストール・稼働確認・ワープ操作回数・判定カテゴリ件数・エラー種別）を、ランダムな匿名IDとともに <code>https://www.google-analytics.com</code>（Google Analytics 4 Measurement Protocol）および <code>https://truex.mojofull.com/api/telemetry</code> へ送信する場合があります。<strong>投稿テキスト、Xのユーザー名、検索語句、閲覧URL履歴は一切送信されません。</strong>
+      </p>
+
+      <h2>4. 端末内（<code>chrome.storage.local</code>）に保存されるデータ一覧</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>保存キー種別</th>
+              <th>保存内容</th>
+              <th>利用者の削除・リセット手段</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>基本設定・ルール<br><code>whitelist_authors</code>, <code>muted_authors</code>, <code>muted_keywords</code>, <code>sunset_auto_lock</code> 等</td>
+              <td>モード設定、表示言語、聖域/ミュート対象、夜間フェード設定、匿名クライアントID（<code>client_id</code>）</td>
+              <td>ポップアップ設定画面からいつでも個別変更・解除可能（拡張機能アンインストールで完全消去）</td>
+            </tr>
+            <tr>
+              <td>認証・ライセンス情報<br><code>pro_license_key</code>, <code>pro_remaining</code>, <code>typesafe_api_key</code></td>
+              <td>Proライセンスキー・残枠数、またはBYOK用APIキー（端末内サンドボックスのみ）</td>
+              <td>ポップアップのライセンス管理・APIキー欄からいつでも削除可能</td>
+            </tr>
+            <tr>
+              <td>ローカル判定キャッシュ<br><code>truex_cache_v5</code> / <code>cache_v5_*</code></td>
+              <td>同一ポストの再判定通信を防ぐためのハッシュ化済み判定結果キャッシュ</td>
+              <td>ポップアップ内「キャッシュをクリア」ボタンで即時全削除可能</td>
+            </tr>
+            <tr>
+              <td>知見ポケット・発酵ラボ・体温計<br><code>truex_knowledge_pocket</code>, <code>truex_fermented_seeds</code>, <code>truex_echo_chamber_state</code></td>
+              <td>保存された知見抜粋、匿名化済みの企画シード、直近の話題バランス状態（すべて端末内限定）</td>
+              <td>ポップアップの各パネル内クリア操作またはアンインストールで削除可能</td>
+            </tr>
+            <tr>
+              <td>ローカル統計カウンター<br><code>truex_stats</code></td>
+              <td>判定件数・薄化件数・節約時間などの<strong>純粋な数値カウンターのみ</strong>（投稿本文・URLゼロ）</td>
+              <td>統計タブの「統計をリセット」ボタンでいつでも初期化可能</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>5. 要求する権限とその理由（最小権限の原則）</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>権限名</th>
+              <th>区分</th>
+              <th>利用目的</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>storage</code></td>
+              <td>permissions</td>
+              <td>設定、ローカル判定キャッシュ、知見ポケット、発酵シード、数値統計、ライセンス情報をブラウザ内に保存するため。これ以外のブラウザ権限（<code>tabs</code>, <code>cookies</code>, <code>history</code>, <code>webRequest</code> 等）は一切要求しません。</td>
+            </tr>
+            <tr>
+              <td><code>https://x.com/*</code><br><code>https://twitter.com/*</code></td>
+              <td>host_permissions</td>
+              <td>X（旧Twitter）画面上の投稿要素を検出し、判定バッジ・薄化フィルター・深呼吸ガード等のUIを表示するため。</td>
+            </tr>
+            <tr>
+              <td><code>https://truex.mojofull.com/*</code></td>
+              <td>host_permissions</td>
+              <td>無料枠/Pro枠の非保存中継プロキシ判定、Stripe決済連携、Pro設定同期（最大3台）、および匿名稼働メトリクス送信のため。</td>
+            </tr>
+            <tr>
+              <td><code>https://api.typesafe.ai/*</code></td>
+              <td>host_permissions</td>
+              <td>ご自身のTypeSafe AI APIキー（BYOK）設定時に、ブラウザから直接AI判定リクエストを送信するため。</td>
+            </tr>
+            <tr>
+              <td><code>https://www.google-analytics.com/*</code></td>
+              <td>host_permissions</td>
+              <td>投稿本文や個人識別情報を含まない匿名の稼働・エラー統計イベントを送信するため。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>6. Chrome Web Store ユーザーデータポリシー準拠宣言</h2>
+      <div class="cert-card">
+        <ul>
+          <li>本拡張機能におけるデータの取得・利用は、Chrome Web Store 開発者プログラムポリシー（Limited Use 要件を含む）に完全に準拠しています。</li>
+          <li>利用者データを第三者へ販売・貸与・譲渡することは一切ありません。</li>
+          <li>利用者データをパーソナライズ広告、リターゲティング広告、信用調査、融資審査等の目的で利用・転送することは一切ありません。</li>
+          <li>リモートホスト上の外部コード（Remote Code）の動的読み込み・実行は一切行いません。すべてのプログラムは拡張機能パッケージ内に同梱されています。</li>
+        </ul>
+      </div>
+
+      <h2>7. お問い合わせ窓口</h2>
+      <ul>
+        <li><strong>開発・運営:</strong> furoku</li>
+        <li><strong>プロダクト:</strong> trueX（Chrome 拡張機能）</li>
+        <li><strong>公開プライバシーポリシーURL:</strong> <a href="https://furoku.github.io/privacy/truex.html" style="color:var(--accent);">https://furoku.github.io/privacy/truex.html</a></li>
+        <li><strong>メール窓口:</strong> <a href="mailto:mojofull.furoku@gmail.com" style="color:var(--accent);">mojofull.furoku@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <!-- ==================== ENGLISH SECTION ==================== -->
+    <section id="en" class="policy-lang" lang="en">
+      <span class="lang-tag">English</span>
+      <h2 class="section-title-top">trueX Privacy Policy</h2>
+      <p>
+        The Chrome extension <strong>"trueX - Calm AI Timeline Filter &amp; Context Checker for X"</strong> (published by <strong>furoku</strong>, "this extension") is built with a strict privacy-by-design architecture for a <strong>Single Purpose</strong>: calmly filtering toxic timeline noise on X (formerly Twitter) while surfacing helpful context and insights. This policy explains what data is processed locally in your browser, when external requests occur, and how you control your data.
+      </p>
+
+      <h2>1. 100% On-Device Browser Processing</h2>
+      <p>The following features run entirely inside your local browser sandbox without transmitting text, drafts, or history to any server:</p>
+      <ul>
+        <li><strong>On-Device Fast Filter (ETC Gate):</strong> Evaluates everyday greetings, hobbies, and obvious rage-bait patterns locally in your browser, resolving ~66% of timeline posts without external API calls.</li>
+        <li><strong>Pre-Post Breath Guard &amp; Gentle Rewording:</strong> Checks reply/post drafts locally before you hit send and suggests calmer phrasing when heated language is detected. <strong>Unpublished drafts never leave your browser.</strong></li>
+        <li><strong>Poison Fermentation Lab (<code>truex_fermented_seeds</code>):</strong> Strips author handles and personal names from dimmed noisy posts on-device and transforms them into anonymous creative question seeds stored locally.</li>
+        <li><strong>Echo Chamber Thermometer (<code>truex_echo_chamber_state</code>):</strong> Measures topic concentration across recently viewed timeline posts strictly in local memory and local storage.</li>
+        <li><strong>Picky Tamagotchi, Weekly Time-Saved Certificate &amp; Sunset Fade:</strong> Computed locally from numerical category counters and your evening schedule preference (<code>sunset_auto_lock</code>).</li>
+      </ul>
+
+      <h2>2. 3-Tier Cloud Verification &amp; Transmitted Data</h2>
+      <p>External HTTPS requests are made <strong>only</strong> when a visible post requires deep AI context verification beyond the on-device filter:</p>
+
+      <h3>(1) Free Trial (100 Checks) &amp; trueX Pro (10,000 Checks/Month)</h3>
+      <ul>
+        <li><strong>Endpoint:</strong> Sent via HTTPS to our Cloudflare Workers quota proxy (<code>https://truex.mojofull.com/api/verify-free</code>), which forwards the verification request to <code>https://api.typesafe.ai</code>.</li>
+        <li><strong>Transmitted Fields:</strong>
+          <ul>
+            <li>Post text (<code>tweet_text</code>), author display name/handle (<code>author</code>), and display language preference (<code>language</code>)</li>
+            <li>Contextual signals when present (quoted post text, external link domain, Community Note presence/text)</li>
+            <li>Randomly generated anonymous installation ID (<code>X-TrueX-Client-Id</code> header — never tied to your real identity or X login)</li>
+            <li>For trueX Pro subscribers only: license token (<code>X-TrueX-License-Key</code> header, <code>tx_pro_...</code>)</li>
+          </ul>
+        </li>
+        <li><strong>Transmission Trigger:</strong> When Auto-Verify is ON, requests are sent only for uncached posts that remain visible in the viewport for at least ~150ms (rapidly scrolled posts are skipped). When Auto-Verify is OFF, requests are sent only when you click the verify button on a post.</li>
+        <li><strong>Zero-Storage Proxy Guarantee:</strong> <code>truex.mojofull.com</code> tracks only remaining quota counters and license validity. <strong>Post text, quoted content, and author handles are never stored, logged, or persisted on our proxy servers.</strong></li>
+      </ul>
+
+      <h3>(2) trueX Pro Billing &amp; Multi-Device Settings Sync (Up to 3 Devices)</h3>
+      <ul>
+        <li><strong>Stripe Payments:</strong> Subscription billing is handled directly by <strong>Stripe</strong> (PCI-DSS Level 1 certified). We never receive, view, or store your credit card numbers, CVC codes, or banking details.</li>
+        <li><strong>Preference Sync (<code>https://truex.mojofull.com/api/pro/sync</code>):</strong> When enabled by a Pro user, only preference lists (<code>whitelist_authors</code>, <code>muted_authors</code>, <code>muted_keywords</code>, <code>schedule_config</code>, <code>custom_theme</code>, <code>butler_voice</code>) are synced across up to 3 devices keyed by license token. No post content or browsing history is synced.</li>
+      </ul>
+
+      <h3>(3) Developer BYOK (Bring Your Own TypeSafe AI Key)</h3>
+      <ul>
+        <li>When you supply your own TypeSafe AI key (<code>typesafe_api_key</code>), verification requests go directly from your browser to <code>https://api.typesafe.ai</code> over HTTPS without touching our proxy server, subject to TypeSafe AI's Terms and Privacy Policy.</li>
+      </ul>
+
+      <h2>3. Anonymous Diagnostic Telemetry</h2>
+      <p>
+        To monitor extension health and reliability, anonymous lifecycle and counter events (install/update, active session heartbeat, keyboard warp usage count, verification category counts, and error codes) may be sent with a random client UUID to <code>https://www.google-analytics.com</code> and <code>https://truex.mojofull.com/api/telemetry</code>. <strong>No post text, X handles, search queries, IP logs, or Personally Identifiable Information (PII) are ever included.</strong>
+      </p>
+
+      <h2>4. Local Browser Storage (<code>chrome.storage.local</code>)</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Storage Keys</th>
+              <th>Purpose</th>
+              <th>User Control &amp; Deletion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Preferences &amp; Rules<br><code>whitelist_authors</code>, <code>muted_authors</code>, <code>muted_keywords</code>, <code>sunset_auto_lock</code></td>
+              <td>Stores filter mode, UI language, Sanctuary/Mute lists, evening fade toggle, and random <code>client_id</code>.</td>
+              <td>Editable or removable anytime in the extension popup; wiped upon uninstalling the extension.</td>
+            </tr>
+            <tr>
+              <td>Credentials &amp; Quota<br><code>pro_license_key</code>, <code>pro_remaining</code>, <code>typesafe_api_key</code></td>
+              <td>Stores your Pro license key/remaining balance or optional BYOK API key inside local storage.</td>
+              <td>Can be cleared anytime from the License / API Key settings section.</td>
+            </tr>
+            <tr>
+              <td>Verification Cache<br><code>truex_cache_v5</code> / <code>cache_v5_*</code></td>
+              <td>Hashed verification results cached locally to prevent duplicate network calls.</td>
+              <td>One-click deletion via "Clear Cache" in the popup.</td>
+            </tr>
+            <tr>
+              <td>Mindful Local Stores<br><code>truex_knowledge_pocket</code>, <code>truex_fermented_seeds</code>, <code>truex_echo_chamber_state</code></td>
+              <td>Saved insight highlights, anonymized fermented idea seeds, and local topic balance state.</td>
+              <td>Can be cleared inside each popup card or by uninstalling the extension.</td>
+            </tr>
+            <tr>
+              <td>Numerical Statistics<br><code>truex_stats</code></td>
+              <td>Purely numerical counters (checked count, calmed count, estimated time saved; zero post text or URLs).</td>
+              <td>One-click reset via "Reset Statistics" in the Stats tab.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>5. Permissions Justification (Principle of Least Privilege)</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Permission</th>
+              <th>Category</th>
+              <th>Justification</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>storage</code></td>
+              <td>permissions</td>
+              <td>Saves user settings, local verification cache, Knowledge Pocket items, anonymized seeds, numerical stats, and license state locally. No broad permissions (<code>tabs</code>, <code>cookies</code>, <code>history</code>, <code>webRequest</code>) are requested.</td>
+            </tr>
+            <tr>
+              <td><code>https://x.com/*</code><br><code>https://twitter.com/*</code></td>
+              <td>host_permissions</td>
+              <td>Detects timeline posts on X to display inline context badges, gentle dimming, and the Pre-Post Breath Guard.</td>
+            </tr>
+            <tr>
+              <td><code>https://truex.mojofull.com/*</code></td>
+              <td>host_permissions</td>
+              <td>Connects to our zero-storage verification quota proxy, Stripe billing links, 3-device Pro preference sync, and anonymous health telemetry.</td>
+            </tr>
+            <tr>
+              <td><code>https://api.typesafe.ai/*</code></td>
+              <td>host_permissions</td>
+              <td>Allows optional BYOK users to send verification requests directly from their browser to TypeSafe AI.</td>
+            </tr>
+            <tr>
+              <td><code>https://www.google-analytics.com/*</code></td>
+              <td>host_permissions</td>
+              <td>Sends strictly anonymous, content-free operational metrics and error codes.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>6. Chrome Web Store User Data Policy &amp; Limited Use Certification</h2>
+      <div class="cert-card">
+        <ul>
+          <li>trueX's use and transfer of information received from browser APIs strictly adheres to the <strong>Chrome Web Store Developer Program Policies</strong>, including the Limited Use requirements.</li>
+          <li>We <strong>never sell, rent, or trade</strong> user data to any third party.</li>
+          <li>We <strong>never use or transfer</strong> user data for personalized/behavioral advertising, creditworthiness, or lending purposes.</li>
+          <li>We <strong>never load or execute remote code</strong>; all executable logic is bundled directly inside the audited extension package.</li>
+        </ul>
+      </div>
+
+      <h2>7. Contact Information</h2>
+      <ul>
+        <li><strong>Developer / Publisher:</strong> furoku</li>
+        <li><strong>Product:</strong> trueX (Chrome Extension)</li>
+        <li><strong>Public Privacy Policy URL:</strong> <a href="https://furoku.github.io/privacy/truex.html" style="color:var(--accent);">https://furoku.github.io/privacy/truex.html</a></li>
+        <li><strong>Support Email:</strong> <a href="mailto:mojofull.furoku@gmail.com" style="color:var(--accent);">mojofull.furoku@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <div>trueX Chrome Extension • Privacy by Design • Published by furoku</div>
+      <div style="margin-top:6px;">
+        <a href="#ja">日本語</a> ・ <a href="#en">English</a> ・ <a href="mailto:mojofull.furoku@gmail.com">mojofull.furoku@gmail.com</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
